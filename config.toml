@@ -1,0 +1,183 @@
+baseURL = "https://3dprintlight.com/"
+languageCode = "en-us"
+title = "3D Print Light"
+theme = "printwire"
+
+[params]
+tagline       = "Custom 3D printed lighting — architectural luminaires, LED housings, light diffusers, and bespoke lighting fixtures for hospitality and retail."
+description   = "3D Print Light covers additive manufacturing of lighting components — from SLA-printed optical diffusers and light guides to metal DMLS luminaire housings and full custom architectural lighting fixtures."
+keywords      = "3D printed lighting, luminaire 3D print, light diffuser AM, LED housing 3D print, architectural lighting AM, custom light fixture 3D print"
+logoEmoji     = "💡"
+contactEmail  = "maxdavisgroup@gmail.com"
+footerServicesLabel = "Services"
+
+colorPrimary      = "#eab308"
+colorPrimaryDark  = "#ca8a04"
+colorPrimaryLight = "#facc15"
+colorBgDark       = "#080700"
+colorBgSection    = "#0d0b00"
+colorBgCard       = "#141100"
+colorBgCardHover  = "#1c1800"
+
+fontPrimary   = "Inter"
+fontSecondary = "Source+Sans+3"
+
+newsFallbackImages = ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"]
+
+heroEyebrow  = "Lighting Additive Manufacturing"
+heroTitle    = "3D Print <em>Light</em>"
+heroSubtitle = "Custom 3D printed lighting — architectural luminaires, LED housings, light diffusers, and bespoke lighting fixtures for hospitality and retail."
+heroCta1Text = "Explore Services"
+heroCta1URL  = "/services/"
+heroCta2Text = "Get a Quote"
+heroCta2URL  = "/contact/"
+heroImage    = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+
+overviewTitle   = "Custom Luminaires Without Tooling"
+overviewText    = "Architectural pendants, bespoke wall lights, and custom LED housings — 3D printing removes the minimum order quantity and tooling cost barrier from custom lighting design."
+overviewBtnText = "View Services"
+overviewBtnURL  = "/services/"
+
+applicationsTitle = "Industries We Serve"
+servicesTitle    = "3D Print Light Services"
+servicesSubtitle = "Custom 3D printed lighting — architectural luminaires, LED housings, light diffusers, and bespoke lighting fixtures for hospitality and retail."
+clusterTitle = "Related 3D Printing Resources"
+newsletterTitle = "Industry Updates to Your Inbox"
+newsletterText  = "Research breakthroughs and industry news — delivered monthly."
+ctaTitle   = "Start Your Project"
+ctaText    = "Custom 3D printed lighting — architectural luminaires, LED housings, light diffusers, and bespoke lighting fixtures for hospitality and retail."
+ctaBtnText = "Get in Touch"
+ctaBtnURL  = "/contact/"
+
+[[params.stats]]
+count  = 1
+suffix = " piece"
+label  = "Minimum Order Quantity"
+
+[[params.stats]]
+count  = 90
+suffix = "%+"
+label  = "Diffuser Transmittance"
+
+[[params.stats]]
+count  = 5
+suffix = "days"
+label  = "Custom Fixture Lead Time"
+
+[[params.stats]]
+count  = 60
+suffix = "%"
+label  = "Tooling Cost Reduction"
+
+
+[[params.applications]]
+title       = "Architectural Lighting"
+description = "Custom pendants, wall lights, and ceiling fixtures for hospitality, retail, and residential projects."
+image       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+
+[[params.applications]]
+title       = "LED Optical Systems"
+description = "Printed light guides, TIR lenses, and diffusers for LED task and architectural lighting."
+image       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+
+[[params.applications]]
+title       = "Retail & Display Lighting"
+description = "Custom spotlights, track light bodies, and display case lighting for retail environments."
+image       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+
+[[params.applications]]
+title       = "Product Design Prototyping"
+description = "Rapid lighting prototype iteration — from sketch to illuminated model in under a week."
+image       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80"
+
+
+[[params.servicesPreview]]
+icon        = "💡"
+title       = "Custom Luminaire Printing"
+description = "Bespoke architectural lighting fixtures in SLA, SLS nylon, and DMLS metal — any geometry, one-piece or batch."
+
+[[params.servicesPreview]]
+icon        = "◎"
+title       = "Optical Diffuser Production"
+description = "Optically clear and opal SLA diffusers — custom geometry, texture, and transmittance for LED lighting."
+
+[[params.servicesPreview]]
+icon        = "⚙️"
+title       = "LED Housing & Heatsink"
+description = "AlSi10Mg DMLS LED housings with integrated cooling fins — optimised thermal management and custom form factor."
+
+[[params.servicesPreview]]
+icon        = "🔬"
+title       = "Lighting Design Support"
+description = "Photometric simulation, DfAM review, and material selection for custom lighting fixture development."
+
+
+[[params.services]]
+name        = "Custom Luminaire Printing"
+description = "Bespoke architectural lighting fixtures in SLA, SLS nylon, and DMLS metal — any geometry, one-piece or batch."
+icon        = "💡"
+image       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+
+[[params.services]]
+name        = "Optical Diffuser Production"
+description = "Optically clear and opal SLA diffusers — custom geometry, texture, and transmittance for LED lighting."
+icon        = "◎"
+image       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+
+[[params.services]]
+name        = "LED Housing & Heatsink"
+description = "AlSi10Mg DMLS LED housings with integrated cooling fins — optimised thermal management and custom form factor."
+icon        = "⚙️"
+image       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+
+[[params.services]]
+name        = "Lighting Design Support"
+description = "Photometric simulation, DfAM review, and material selection for custom lighting fixture development."
+icon        = "🔬"
+image       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+
+
+[[params.clusterLinks]]
+name        = "3dprintlight.com"
+url         = "https://3dprintlight.com"
+description = "Lighting & optics 3D printing"
+
+[[params.clusterLinks]]
+name        = "3dprintlenses.com"
+url         = "https://3dprintlenses.com"
+description = "Optics 3D printing"
+
+[[params.clusterLinks]]
+name        = "3dprintcircuitry.com"
+url         = "https://3dprintcircuitry.com"
+description = "Electronics AM"
+
+[[params.clusterLinks]]
+name        = "sendcutship.com"
+url         = "https://sendcutship.com"
+description = "Custom manufacturing"
+
+[[menu.main]]
+name = "Home"
+url  = "/"
+weight = 1
+[[menu.main]]
+name = "About"
+url  = "/about/"
+weight = 2
+[[menu.main]]
+name = "Articles"
+url  = "/articles/"
+weight = 3
+[[menu.main]]
+name = "Services"
+url  = "/services/"
+weight = 4
+[[menu.main]]
+name = "Contact"
+url  = "/contact/"
+weight = 5
+[[menu.main]]
+name = "Advertise"
+url  = "/advertise/"
+weight = 6
