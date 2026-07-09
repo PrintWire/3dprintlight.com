@@ -1,9 +1,18 @@
 baseURL = "https://3dprintlight.com/"
 languageCode = "en-us"
 title = "3D Print Light"
-theme = "printwire"
+[outputs]
+  home = ["HTML", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
+siteName      = "3D Print Light"
+logoHtml      = '3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">LIGHT</span>'
+ogImage       = "/images/03_antenna.png"
 tagline       = "Custom 3D printed lighting — architectural luminaires, LED housings, light diffusers, and bespoke lighting fixtures for hospitality and retail."
 description   = "3D Print Light covers additive manufacturing of lighting components — from SLA-printed optical diffusers and light guides to metal DMLS luminaire housings and full custom architectural lighting fixtures."
 keywords      = "3D printed lighting, luminaire 3D print, light diffuser AM, LED housing 3D print, architectural lighting AM, custom light fixture 3D print"
