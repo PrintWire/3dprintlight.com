@@ -83,36 +83,10 @@
 
     <div class="ed-section-label">
       Analysis &amp; Deep Dives
-      <a href="#">View All &rarr;</a>
+      <a href="/articles/">View All &rarr;</a>
     </div>
-    <div class="ed-list">
-      <article class="ed-list-item">
-        <img src="images/li02_waveguide.png" alt="Printed light guide">
-        <div>
-          <span class="ed-badge">Optics</span>
-          <div class="ed-card-meta">June 24, 2026 · 9 min read</div>
-          <h3><a href="#">Printed Light Guides Route Light Without Fiber</a></h3>
-          <p class="ed-card-excerpt">Transparent printed light guides are channeling LED output to where a fixture needs it — collapsing multi-part optical assemblies into one printed piece.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/li03_lens_array.png" alt="Printed lens array">
-        <div>
-          <span class="ed-badge">Lenses</span>
-          <div class="ed-card-meta">June 20, 2026 · 7 min read</div>
-          <h3><a href="#">3D-Printed Lens Arrays Reach Optical-Grade Clarity</a></h3>
-          <p class="ed-card-excerpt">Optical resins and post-print polishing are producing printed lenses and micro-lens arrays with transmission approaching molded optics.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/li04_light_pipe.png" alt="Voronoi lampshade">
-        <div>
-          <span class="ed-badge">Fixtures</span>
-          <div class="ed-card-meta">June 18, 2026 · 10 min read</div>
-          <h3><a href="#">Voronoi Shades: Custom Luminaires With No Mold</a></h3>
-          <p class="ed-card-excerpt">Intricate lattice shades that no injection mold could release are turning bespoke lighting into a printable, on-demand product.</p>
-        </div>
-      </article>
+    <div class="ed-list" id="pwDeepDives">
+      <div style="padding:1.5rem;color:var(--text-faint);">Loading analysis…</div>
     </div>
 
     <div class="ed-section-label">
@@ -422,6 +396,31 @@ document.querySelector('.ed-nav-toggle')?.addEventListener('click', () => {
       ? top.map(card).join('')
       : '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-faint);">Unable to load news.</div>';
   }
+})();
+
+// -- Analysis & Deep Dives: PrintWire catalog in list format --
+(function(){
+  var box = document.getElementById('pwDeepDives');
+  if (!box) return;
+  function esc(s){var d=document.createElement('div');d.appendChild(document.createTextNode(s==null?'':s));return d.innerHTML;}
+  var empty = '<div style="padding:1.5rem;color:var(--text-faint);">In-depth analysis and deep dives are on the way — check back soon.</div>';
+  fetch('network.json',{cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : []; })
+    .then(function(items){
+      items = (items || []).slice();
+      items.sort(function(a,b){ return (b.iso||'').localeCompare(a.iso||''); });
+      if (!items.length){ box.innerHTML = empty; return; }
+      box.innerHTML = items.slice(0,8).map(function(a){
+        var img = a.img ? '<img src="'+esc(a.img)+'" alt="" loading="lazy">' : '';
+        var meta = esc(a.date||'') + (a.origin ? ' · '+esc(a.origin) : '');
+        return '<article class="ed-list-item">'+img+'<div>'+
+          '<div class="ed-card-meta">'+meta+'</div>'+
+          '<h3><a href="'+esc(a.url)+'">'+esc(a.title)+'</a></h3>'+
+          '<p class="ed-card-excerpt">'+esc(a.summary||'')+'</p>'+
+          '</div></article>';
+      }).join('');
+    })
+    .catch(function(){ box.innerHTML = empty; });
 })();
 </script>
 </body>
